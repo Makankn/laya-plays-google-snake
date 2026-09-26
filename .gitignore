@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+captures/
+capture-region.json
+models/
+dist/
+*.egg-info/
+.coverage
+.ruff_cache/
+HANDOVER.md

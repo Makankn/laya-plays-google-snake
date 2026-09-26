@@ -1,0 +1,53 @@
+[project]
+name = "google-snake-laya"
+version = "0.1.0"
+description = "Laya plays the real Google Snake browser game from screenshots and timed arrow keys"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+authors = [{ name = "Makankn" }]
+keywords = ["google-snake", "laya", "computer-vision", "game-ai", "browser-game"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "mss>=10.0.0",
+    "numpy>=2.0.0",
+    "pillow>=11.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3.0"]
+laya = ["laya", "torch"]
+
+[project.urls]
+Homepage = "https://github.com/Makankn/laya-plays-google-snake"
+Repository = "https://github.com/Makankn/laya-plays-google-snake"
+Issues = "https://github.com/Makankn/laya-plays-google-snake/issues"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[project.scripts]
+snake-state = "snake_laya.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/snake_laya"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

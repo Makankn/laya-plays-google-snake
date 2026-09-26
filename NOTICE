@@ -1,0 +1,17 @@
+Laya Plays Google Snake
+Copyright 2026 Makankn
+
+This project uses the Laya Python runtime and distributes a separately
+fine-tuned checkpoint derived from the multilingual model in:
+
+  https://github.com/NandhaKishorM/laya
+  https://huggingface.co/convaiinnovations/laya
+
+Laya and its original model weights are Copyright Convai Innovations and Laya
+contributors, licensed under the Apache License, Version 2.0. The Snake-adapted
+checkpoint modifies the decision layers; its encoder and tokenizer originate
+from the upstream multilingual model. See MODEL_CARD.md for the adaptation and
+evaluation details.
+
+Google Snake is a Google game. This project is independent and is not
+affiliated with or endorsed by Google.
