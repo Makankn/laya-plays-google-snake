@@ -33,7 +33,7 @@ cd laya-plays-google-snake
 uv sync --extra laya
 ```
 
-Download the Snake-adapted checkpoint from the [v0.1.0 release](https://github.com/Makankn/laya-plays-google-snake/releases/tag/v0.1.0) and extract it so the model lives at `models/snake-laya-balanced/`. The Git repository intentionally does not contain the 1.3 GB weights. You can also train a local checkpoint using the command below.
+Download the Snake-adapted checkpoint from the [v0.1.0 release](https://github.com/Makankn/laya-plays-google-snake/releases/tag/v0.1.0) (will be released soon :) ) and extract it so the model lives at `models/snake-laya-balanced/`. The Git repository intentionally does not contain the 1.3 GB weights. You can also train a local checkpoint using the command below.
 The archive's SHA-256 is recorded in [CHECKSUMS.txt](CHECKSUMS.txt).
 
 First verify perception without sending keys:
