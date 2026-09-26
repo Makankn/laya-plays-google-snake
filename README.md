@@ -6,7 +6,7 @@
 
 [![Laya playing the real Google Snake game, with live move probabilities in the overlay](assets/demo.gif)](assets/demo.mp4?raw=1)
 
-[Watch the full 56-second video with sound](assets/demo.mp4?raw=1). The animation above is a silent preview; click it to open the recording.
+[Download the full 56-second video with sound](assets/demo.mp4?raw=1). The animation above is a silent preview; click it to get the MP4.
 
 This project plays the [Google Snake browser game](https://www.google.com/fbx?fbx=snake_arcade) from screen captures and arrow-key presses. It does **not** implement a Snake clone, read the game's internal state or DOM, or use a vision-language model. A deterministic visual tracker turns pixels into a board state; [Laya](https://huggingface.co/convaiinnovations/laya) chooses among safe directions; the controller times physical keyboard input and checks whether the game accepted it.
 
