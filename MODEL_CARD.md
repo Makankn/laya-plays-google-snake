@@ -1,6 +1,6 @@
 # Snake-adapted Laya checkpoint
 
-This is a full, loadable checkpoint for the `snake_laya` controller, distributed separately from Git as `snake-laya-balanced-v0.1.0.zip` in the [v0.1.0 GitHub release](https://github.com/Makankn/laya-plays-google-snake/releases/tag/v0.1.0).
+This is a full, loadable checkpoint for the `snake_laya` controller, [published on Hugging Face](https://huggingface.co/BoogieKn/laya-plays-google-snake) separately from the Git repository.
 
 ## Origin and adaptation
 
@@ -8,7 +8,11 @@ This is a full, loadable checkpoint for the `snake_laya` controller, distributed
 - **Adaptation:** The encoder is frozen while the typed-decision layers are trained on balanced `UP`/`RIGHT`/`DOWN`/`LEFT` choices from simulated Snake board states. The training and simulator code are in this repository. The shipped checkpoint's config records `snake-balanced-imitation-frozen-encoder`; it does not embed the exact hyperparameters of the original run.
 - **Input/output:** Structured board facts and short legal-move descriptions go in; a typed-choice probability distribution over the directions comes out. This model does **not** interpret screenshots. Deterministic code handles perception and excludes unsafe actions.
 
-The downloadable artifact contains the full model weights, config, encoder config, tokenizer, this card, `LICENSE`, and `NOTICE`. Unzip into the repository root; the resulting directory should be `models/snake-laya-balanced/`.
+The Hugging Face repository contains the full model weights, config, encoder config, tokenizer, model card, `LICENSE`, and `NOTICE`. Download it into `models/snake-laya-balanced/`:
+
+```bash
+uv run --extra laya hf download BoogieKn/laya-plays-google-snake --local-dir models/snake-laya-balanced
+```
 
 ## Reproducible evaluation
 
